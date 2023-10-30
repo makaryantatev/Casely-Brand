@@ -1,0 +1,443 @@
+$whitecolor: rgb(245, 245, 245);
+$borderr: 1px solid $whitecolor;
+
+@mixin p1-p3($fsize, $fweight) {
+    font-size: $fsize;
+    font-weight: $fweight;
+    color: $whitecolor;
+    text-shadow: 2px 2px 8px #000000c5;
+}
+
+@mixin p2-p4($fsize, $fweight) {
+    font-size: $fsize;
+    font-weight: $fweight;
+    color: $whitecolor;
+}
+
+@mixin col-3($bgimg) {
+    background-image: $bgimg;
+    padding: 20px;
+    margin: 10px;
+    width: 34rem;
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: $borderr;
+    box-shadow: 0 0  90px 10px black inset;
+    transition: 0.5s all;
+}
+@mixin product-col($bgimg) {
+    background-image: $bgimg;
+    height: 100%;
+    margin: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: $borderr;
+    transition: 0.5s all;
+}
+
+@mixin icons($fsize) {
+    color: $whitecolor;
+    font-size: $fsize;
+    text-decoration: none;
+}
+
+@mixin buttonlight($bradius) {
+    margin-top: 10px;
+    color: $whitecolor;
+    background-color: transparent;
+    font-size: 17px;
+    font-weight: 400;
+    border: $borderr;
+    border-radius: $bradius;
+    transition: 0.3s all;
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+        color: $whitecolor;
+        border: $borderr;
+    }
+}
+
+@mixin headerp {
+    position: absolute;
+    margin: 0;
+    display: inline-block;
+    font-size: 50px;
+    color: $whitecolor;
+    font-weight: 900;
+    opacity: 0;
+    transition: 0.5s all;
+    &:hover {
+        color: #037FD5;
+    }
+}
+
+@mixin container-fluid($ppadding) {
+    background-color: rgba(0, 0, 0, 0.637);
+    padding: $ppadding;
+}
+
+@mixin subscribelabel{
+    transform: translate(0, -10px);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    .bxs-check-circle {
+        font-size: 45px;
+        color: $whitecolor;
+    }
+    .buttonlabel {
+        font-size: 20px;
+        color: $whitecolor;
+    }
+    .navbar {
+        background-color: transparent !important;
+        margin: 0 60px;
+        .logo-div {
+            display: flex;
+            justify-content: center;
+            img {
+                margin-right: 2px;
+                width: 50px;
+            }
+            .logo-div1 {
+                padding-top: 8px;
+                .logo-div-p1 {
+                    margin: 0;
+                    color: $whitecolor;
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+                .logo-div-p2 {
+                    margin: 0;
+                    color: $whitecolor;
+                    font-size: 12px;
+                }
+            }
+        }
+        .navbar-toggler {
+            border: none;
+            outline: none !important;
+            .navbar-toggler-icon {
+                color: $whitecolor !important;
+            }
+        }
+        .offcanvas-end {
+            background-color: transparent !important;
+            padding-top: 50px !important;
+            width: 90%;
+            border: none !important;
+            .btn-close {
+                color: $whitecolor !important;
+            }
+            .offcanvas-body {
+                position: relative;
+                .header-p {
+                    @include headerp;
+                }
+                .header-p2{
+                    margin-top: 40px;
+                }
+                .header-p3{
+                    margin-top: 80px;
+                }
+                .header-p4{
+                    margin-top: 120px;
+                }
+            }
+        }
+    }
+    header {
+        @include container-fluid(40px);
+        .col-10 {
+            padding: 180px 0 0 0;
+            label{
+                @include subscribelabel;
+            }
+            h1 {
+                display: inline-block;
+                font-size: 70px;
+                color: $whitecolor;
+            }
+            hr {
+                color: $whitecolor;
+            }
+            .p2 {
+                @include p2-p4(17px, 100);
+            }
+            .p4 {
+                @include p2-p4(25px, 500);
+            }
+        }
+        .btn {
+            @include buttonlight(20px);
+        }
+    }
+    #about {
+        @include container-fluid(40px);
+        label{
+            @include subscribelabel;
+        }
+        .p1 {
+            @include p1-p3(50px, 700);
+        }
+        .p2 {
+            @include p2-p4(17px, 100);
+        }
+        .p3 {
+            @include p1-p3(20px, 500);
+            margin: 0;
+        }
+        .p4 {
+            @include p2-p4(25px, 500);
+        }
+        a {
+            @include icons(30px);
+        }
+    }
+    #paperdesign {
+        @include container-fluid(0 40px);
+        #carouselExampleIndicators{
+            position: relative !important;
+            .carouseltext{
+                position: absolute;
+                top: 0;
+                left: 50%;
+                .p1{
+                    @include p1-p3(50px, 500);
+                }
+                .p2{
+                    @include p2-p4(16px, 300);
+                }
+                .p4{
+                    @include p2-p4(25px, 500);
+                }
+            }
+        }
+        .carouseldiv{
+            display: flex;
+            justify-content: center;
+            .carousel-control-prev{
+                left: 0 !important;
+                top: -30px;
+            }
+            .carousel-control-next{
+                left: 0 !important;
+                top: 30px
+            }
+        }
+    }
+    #projects {
+        @include container-fluid(40px);
+        .p1 {
+            @include p1-p3(50px, 700);
+        }
+        .p2 {
+            @include p2-p4(17px, 100);
+            margin: 5px;
+        }
+        .p3 {
+            @include p1-p3(20px, 500);
+            margin: 5px;
+        }
+        .p4 {
+            @include p2-p4(20px, 700);
+            margin: 5px;
+        }
+        .col-sm-3{
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                left: 12px;
+                top: 10px;
+                width: 95%;
+                height: 95%;
+                border: $borderr;
+                background-color: rgba(0, 0, 0, 0.3);
+                opacity: 0;
+                transition: 1s all;
+            }
+            &:hover{
+                border: 1px solid transparent;
+            }
+            &:hover::before{
+                opacity: 1;
+            }
+        }
+        .project-col1 {
+            @include col-3(url(../img/img-sample9-square.jpg));
+        }
+        .project-col2 {
+            @include col-3(url(../img/img-sample10-square.jpg));
+        }
+        .project-col3 {
+            @include col-3(url(../img/img-sample11-square.jpg));
+        }
+        .project-col4 {
+            @include col-3(url(../img/img-sample12-square.jpg));
+        }
+        .project-col5 {
+            @include col-3(url(../img/img-sample13-square.jpg));
+        }
+        .project-col6 {
+            @include col-3(url(../img/img-sample14-square.jpg));
+        }
+    }
+    #services {
+        @include container-fluid(40px);
+        .p1 {
+            @include p1-p3(50px, 700);
+        }
+        .p2 {
+            @include p2-p4(17px, 100);
+        }
+        .p3 {
+            @include p1-p3(20px, 500);
+        }
+        hr {
+            width: calc(100% + 70%);
+            color: $whitecolor;
+        }
+        a {
+            @include icons(40px);
+        }
+    }
+    #products {
+        @include container-fluid(40px);
+        .p1 {
+            @include p1-p3(50px, 700);
+        }
+        .p2 {
+            @include p2-p4(17px, 100);
+        }
+        .prcol{
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                left: 5px;
+                top: 5px;
+                width: 95%;
+                height: 95%;
+                border: $borderr;
+                transition: 0.5s all;
+                opacity: 0;
+            }
+            &:hover{
+                border: 1px solid transparent;
+            }
+            &:hover::before{
+                opacity: 1;
+            }
+        }
+        .prcol1{
+            text-align: center
+        }
+        .p3 {
+            @include p1-p3(20px, 500);
+        }
+        .product-p1 {
+            position: relative;
+            text-align: right;
+            color: $whitecolor;
+            font-size: 25px;
+            font-weight: 700;
+        }
+        .product-p1::before {
+            content: " ";
+            position: absolute;
+            width: 0.5px;
+            height: 40px;
+            left: 50%;
+            background-color: $whitecolor;
+        }
+        .productcol1{
+            @include product-col(url(../img/img-sample5.jpg))
+        }
+        .productcol2{
+            @include product-col(url(../img/img-sample6.jpg))
+        }
+        .productcol3{
+            @include product-col(url(../img/img-sample7.jpg))
+        }
+        .productcol4{
+            @include product-col(url(../img/img-sample8.jpg))
+        }
+        .productcol5{
+            @include product-col(url(../img/img-sample9.jpg))
+        }
+        .productcol6{
+            @include product-col(url(../img/img-sample10.jpg))
+        }
+    }
+    #subscribe {
+        @include container-fluid(40px);
+        label{
+            @include subscribelabel;
+        }
+        .p1 {
+            @include p1-p3(50px, 700);
+        }
+        .p2 {
+            @include p2-p4(17px, 100);
+        }
+        .p3 {
+            @include p1-p3(20px, 500);
+        }
+        .form-control {
+            margin-top: 10px !important;
+            padding: 0 !important;
+            width: 500px !important;
+            text-align: left !important;
+            background-color: transparent !important;
+            outline: none !important;
+            border: none !important;
+            border-radius: 0 !important;
+            border-bottom: 1px solid $whitecolor !important;
+        }
+        .div-icons {
+            a{
+                @include icons(30px);
+                i{
+                    transition: 0.2s all;
+                }
+                i:hover {
+                    color: rgba(255, 255, 255, 0.692);
+                }
+            }
+        }
+    }
+    footer {
+        @include container-fluid(40px);
+        .p1 {
+            @include p1-p3(50px, 700);
+        }
+        .p2 {
+            @include p2-p4(17px, 400);
+        }
+        .p3 {
+            @include p1-p3(25px, 500);
+        }
+        .p4 {
+            @include p2-p4(17px, 400);
+        }
+        a {
+            @include icons(30px);
+        }
+        .form-label {
+            @include p1-p3(20px, 500);
+        }
+        .form-control {
+            color: $whitecolor !important;
+            background-color: transparent !important;
+            border: $borderr !important;
+        }
+        .btn {
+            @include buttonlight(10px);
+        }
+    }
+}

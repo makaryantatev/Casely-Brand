@@ -1,0 +1,127 @@
+@media only screen and (max-width: 1200px) {
+    #projects .col-sm-3{
+        width: 32rem;
+    }    
+}
+@media only screen and (max-width: 600px) {
+    body #about .p1 {
+        font-size: 48px;
+    }
+    body #paperdesign #carouselExampleIndicators .carouseltext .p1 {
+        font-size: 48px;
+    }
+    body #services .p1 {
+        font-size: 48px;
+    }
+    body #products .p1 {
+        font-size: 48px;
+    }
+    body #projects .p1 {
+        font-size: 48px;
+    }
+    body #subscribe .p1 {
+        font-size: 48px;
+    } 
+    body header .col-10 h1 {
+        font-size: 60px;
+    }
+    body footer .p1 {
+        font-size: 48px;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .col-sm-3{
+        width: 5rem;
+    } 
+    body #about .p1 {
+        font-size: 45px;
+    }
+    body #paperdesign #carouselExampleIndicators .carouseltext .p1 {
+        font-size: 45px;
+    }
+    body #services .p1 {
+        font-size: 45px;
+    }
+    body #projects .p1 {
+        font-size: 45px;
+    }
+    body #products .p1 {
+        font-size: 45px;
+    }
+    body #subscribe .p1 {
+        font-size: 45px;
+    }   
+    body header .col-10 h1 {
+        font-size: 57px;
+    }
+    body footer .p1 {
+        font-size: 45px;
+    }
+    body header .col-10 .p4 {
+        font-size: 23px;
+    }
+}
+@media only screen and (max-width: 450px) {
+    .col-sm-3{
+        width: 5rem;
+    } 
+    body #about .p1 {
+        font-size: 42px;
+    }
+    body #paperdesign #carouselExampleIndicators .carouseltext .p1 {
+        font-size: 42px;
+    }
+    body #services .p1 {
+        font-size: 42px;
+    }
+    body #products .p1 {
+        font-size: 42px;
+    }
+    body #projects .p1 {
+        font-size: 42px;
+    }
+    body #subscribe .p1 {
+        font-size: 42px;
+    } 
+    body header .col-10 h1 {
+        font-size: 39px;
+    } 
+    body footer .p1 {
+        font-size: 42px;
+    }
+    body footer .p2 {
+        font-size: 15px;
+    }
+
+    body #about .p2 {
+        font-size: 15px;
+    }
+    body #paperdesign #carouselExampleIndicators .carouseltext .p2 {
+        font-size: 15px;
+    }
+    body #services .p2 {
+        font-size: 15px;
+    }
+    body #projects .p2 {
+        font-size: 15px;
+    }
+    body #subscribe .p2 {
+        font-size: 15px;
+    }
+    body #subscribe .p2 {
+        font-size: 15px;
+    }  
+    body #products .p2 {
+        font-size: 15px;
+    }
+
+    body footer .p3 {
+        font-size: 23px;
+    }
+    body footer .p4 {
+        font-size: 16px;
+    }
+    body header .col-10 .p4 {
+        font-size: 20px;
+    }
+}
